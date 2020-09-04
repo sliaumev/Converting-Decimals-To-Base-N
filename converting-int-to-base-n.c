@@ -1,8 +1,7 @@
 // Velasco, Sophia Liaume N.
-
+// University of the Philippines Mindanao
 /* This program is designed to take an integer of base 10 and convert it to any base from 2 to 36.
-This program uses a duplicate variable since repeatedly dividing a number exhausts it to zero.
-*/
+This program uses a duplicate variable since repeatedly dividing a number exhausts it to zero. */
 
 #include<stdio.h>
 int num,base,rem,i,ctr,dnum,dbase,ctr1;		// Declare int variables
@@ -18,28 +17,28 @@ int num,base,rem,i,ctr,dnum,dbase,ctr1;		// Declare int variables
 	ctr1 - 
 */
 
-char inp[100];								// Create a char array for 99 characters.
+char inp[100];		// Create a char array for 99 characters.
 int main()
 {
-	printf("Input number: ");				// Prompt the user for a number.
-	scanf("%d", &num);						// Store the number to be converted in the variable num.
+	printf("Input number: ");		// Prompt the user for a number.
+	scanf("%d", &num);		// Store the number to be converted in the variable num.
 	do
 	{
 		printf("Input base: ");
 		scanf("%d", &base);
 	}
-	while(base<2 || base>36); 				// Checking whether the inputted base is valid.
+	while(base<2 || base>36); 		// Checking whether the inputted base is valid.
 	
-	dbase = base;							// Duplicating the desired base.
-	dnum = num;								// Duplicating the number to be converted.
+	dbase = base;		// Duplicating the desired base.
+	dnum = num;		// Duplicating the number to be converted.
 
 	if(dnum==0)
 	{
-		ctr = 1;							// If the number is equal to zero autmatically set the counter to 1.
+		ctr = 1;		// If the number is equal to zero autmatically set the counter to 1.
 	}
 	else
 	{
-		/* Keep repeating the process of dividing the number by the desired base
+		/* Keep repeating the process of dividing the number by the desired base 
 		*/
 		while(dnum!=0)						
 		{
@@ -48,7 +47,7 @@ int main()
 			ctr = ctr + 1;
 		}	
 	}	
- 	inp[ctr]; //Declaring the size of the array for the loop
+ 	inp[ctr];		//Declaring the size of the array for the loop
 
 	for(i=0;i<ctr;i++)
 		{
